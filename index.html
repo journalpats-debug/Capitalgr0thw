@@ -1,89 +1,91 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Deine Seite</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Capitalgr0wth</title>
 
-    <!-- Grund-CSS (kannst du ersetzen / erweitern) -->
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f8f9fc;
-            color: #222;
-        }
-        header {
-            background: #111;
-            padding: 20px;
-            text-align: center;
-            color: #fff;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        .section {
-            margin: 60px 0;
-            text-align: center;
-        }
-        .btn {
-            display: inline-block;
-            padding: 14px 28px;
-            margin: 10px;
-            background: #007bff;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: bold;
-        }
-        .btn:hover {
-            background: #0056b3;
-        }
-    </style>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+        font-family: Arial, sans-serif;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 48px;
+        margin-bottom: 60px;
+        letter-spacing: 2px;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 280px;
+    }
+
+    .btn {
+        position: relative;
+        padding: 16px;
+        background: #111;
+        border: 1px solid #333;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        letter-spacing: 1px;
+        overflow: hidden;
+        transition: 0.3s ease;
+    }
+
+    .btn:hover {
+        background: #1a1a1a;
+        border-color: #555;
+    }
+
+    /* Shimmer Effekt */
+    .btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            120deg,
+            transparent,
+            rgba(255,255,255,0.15),
+            transparent
+        );
+        transition: 0.6s;
+    }
+
+    .btn:hover::before {
+        left: 100%;
+    }
+
+</style>
 </head>
+
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <h1>Willkommen auf deiner Seite</h1>
-        <p>Wähle einen Bereich aus:</p>
-    </header>
+<h1>Capitalgr0wth</h1>
 
-    <div class="container">
-
-        <!-- Discord Community -->
-        <div class="section" id="discord">
-            <h2>Discord Community</h2>
-            <a href="#" class="btn">Zu Discord</a>
-        </div>
-
-        <!-- Beginner Guide -->
-        <div class="section" id="beginner">
-            <h2>Beginner Guide</h2>
-            <a href="#" class="btn">Guide öffnen</a>
-        </div>
-
-        <!-- Instagram -->
-        <div class="section" id="instagram">
-            <h2>Instagram</h2>
-            <a href="#" class="btn">Zu Instagram</a>
-        </div>
-
-        <!-- Twitter Profil -->
-        <div class="section" id="twitter">
-            <h2>Twitter Profil</h2>
-            <a href="#" class="btn">Zu Twitter</a>
-        </div>
-
-        <!-- TikTok -->
-        <div class="section" id="tiktok">
-            <h2>Tik Tok</h2>
-            <a href="#" class="btn">Zu TikTok</a>
-        </div>
-
-    </div>
+<div class="buttons">
+    <a href="#" class="btn">Discord Community</a>
+    <a href="#" class="btn">Beginner Guide</a>
+    <a href="#" class="btn">Instagram</a>
+    <a href="#" class="btn">Twitter Profil</a>
+    <a href="#" class="btn">Tik Tok</a>
+</div>
 
 </body>
 </html>
