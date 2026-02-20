@@ -19,13 +19,16 @@
         min-height: 100vh;
     }
 
-    /* Logo oben rechts */
+    /* Kleines dezentes Textlogo */
     .logo {
         position: absolute;
         top: 20px;
         right: 30px;
-        width: 60px;
-        opacity: 0.7;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        color: #888;
+        opacity: 0.6;
     }
 
     .wrapper {
@@ -36,16 +39,16 @@
     }
 
     h1 {
-        font-size: 48px;
-        margin-bottom: 50px;
-        letter-spacing: 3px;
+        font-size: 64px;   /* größer gemacht */
+        margin-bottom: 60px;
+        letter-spacing: 4px;
     }
 
     .buttons {
         display: flex;
         flex-direction: column;
         gap: 18px;
-        width: 300px;
+        width: 320px;
         align-items: center;
     }
 
@@ -95,7 +98,7 @@
 
 <body>
 
-<img src="logo.png" class="logo" alt="Logo">
+<div class="logo">CG</div>
 
 <div class="wrapper">
     <h1>Capitalgr0wth</h1>
