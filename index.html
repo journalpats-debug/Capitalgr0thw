@@ -6,36 +6,52 @@
 <title>Capitalgr0wth</title>
 
 <style>
+
     body {
         margin: 0;
         padding: 0;
-        background-color: #000;
+        background: #000;
         font-family: Arial, sans-serif;
         color: white;
         display: flex;
         justify-content: center;
         align-items: center;
         min-height: 100vh;
+    }
+
+    /* Logo oben rechts */
+    .logo {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        width: 60px;
+        opacity: 0.7;
+    }
+
+    .wrapper {
+        text-align: center;
+        display: flex;
         flex-direction: column;
+        align-items: center;
     }
 
     h1 {
         font-size: 48px;
-        margin-bottom: 60px;
-        letter-spacing: 2px;
-        text-align: center;   /* explizite Zentrierung */
-        width: 100%;
+        margin-bottom: 50px;
+        letter-spacing: 3px;
     }
 
     .buttons {
         display: flex;
         flex-direction: column;
-        gap: 20px;
-        width: 280px;
+        gap: 18px;
+        width: 300px;
+        align-items: center;
     }
 
     .btn {
         position: relative;
+        width: 100%;
         padding: 16px;
         background: #111;
         border: 1px solid #333;
@@ -53,6 +69,7 @@
         border-color: #555;
     }
 
+    /* Shimmer Effekt */
     .btn::before {
         content: "";
         position: absolute;
@@ -66,7 +83,7 @@
             rgba(255,255,255,0.15),
             transparent
         );
-        transition: 0.6s;
+        transition: 0.6s ease;
     }
 
     .btn:hover::before {
@@ -78,14 +95,18 @@
 
 <body>
 
-<h1>Capitalgr0wth</h1>
+<img src="logo.png" class="logo" alt="Logo">
 
-<div class="buttons">
-    <a href="#" class="btn">Discord Community</a>
-    <a href="#" class="btn">Beginner Guide</a>
-    <a href="#" class="btn">Instagram</a>
-    <a href="#" class="btn">Twitter Profil</a>
-    <a href="#" class="btn">Tik Tok</a>
+<div class="wrapper">
+    <h1>Capitalgr0wth</h1>
+
+    <div class="buttons">
+        <a href="#" class="btn">Discord Community</a>
+        <a href="#" class="btn">Beginner Guide</a>
+        <a href="#" class="btn">Instagram</a>
+        <a href="#" class="btn">Twitter Profil</a>
+        <a href="#" class="btn">Tik Tok</a>
+    </div>
 </div>
 
 </body>
