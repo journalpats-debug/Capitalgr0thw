@@ -5,147 +5,87 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Capitalgr0wth</title>
 
-<!-- Premium Font -->
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
-
 <style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #000;
+        font-family: Arial, sans-serif;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        flex-direction: column;
+    }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Space Grotesk', sans-serif;
-    background: radial-gradient(circle at 20% 20%, #111 0%, #000 60%);
-    color: white;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-/* Subtle moving gradient background */
-body::before {
-    content: "";
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle at 70% 30%, rgba(255,255,255,0.04), transparent 40%);
-    animation: bgMove 12s linear infinite;
-}
-
-@keyframes bgMove {
-    0% { transform: translate(0,0); }
-    50% { transform: translate(-10%, -10%); }
-    100% { transform: translate(0,0); }
-}
-
-.container {
-    position: relative;
-    text-align: center;
-    animation: fadeIn 1.2s ease forwards;
-    opacity: 0;
-}
-
-@keyframes fadeIn {
-    to { opacity: 1; }
-}
-
-h1 {
-    font-size: 60px;
-    font-weight: 700;
-    margin-bottom: 60px;
-    letter-spacing: 4px;
-    background: linear-gradient(90deg, #fff, #aaa);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 20px rgba(255,255,255,0.15);
-}
-
-/* Buttons */
-.buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
-    width: 320px;
-}
-
-.btn {
-    position: relative;
-    padding: 18px;
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,0.15);
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    letter-spacing: 1px;
-    transition: all 0.4s ease;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-/* Hover Lift + Glow */
-.btn:hover {
-    transform: translateY(-4px) scale(1.03);
-    border-color: rgba(255,255,255,0.4);
-    box-shadow: 0 0 25px rgba(255,255,255,0.08);
-}
-
-/* Shimmer Sweep */
-.btn::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -120%;
-    width: 60%;
-    height: 100%;
-    background: linear-gradient(
-        120deg,
-        transparent,
-        rgba(255,255,255,0.25),
-        transparent
-    );
-    transform: skewX(-20deg);
-}
-
-.btn:hover::before {
-    animation: shimmer 0.9s ease forwards;
-}
-
-@keyframes shimmer {
-    0% { left: -120%; }
-    100% { left: 150%; }
-}
-
-/* Responsive */
-@media (max-width: 480px) {
     h1 {
-        font-size: 42px;
+        font-size: 48px;
+        margin-bottom: 60px;
+        letter-spacing: 2px;
+        text-align: center;   /* explizite Zentrierung */
+        width: 100%;
     }
+
     .buttons {
-        width: 260px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 280px;
     }
-}
+
+    .btn {
+        position: relative;
+        padding: 16px;
+        background: #111;
+        border: 1px solid #333;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+        letter-spacing: 1px;
+        overflow: hidden;
+        transition: 0.3s ease;
+    }
+
+    .btn:hover {
+        background: #1a1a1a;
+        border-color: #555;
+    }
+
+    .btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            120deg,
+            transparent,
+            rgba(255,255,255,0.15),
+            transparent
+        );
+        transition: 0.6s;
+    }
+
+    .btn:hover::before {
+        left: 100%;
+    }
 
 </style>
 </head>
 
 <body>
 
-<div class="container">
-    <h1>Capitalgr0wth</h1>
+<h1>Capitalgr0wth</h1>
 
-    <div class="buttons">
-        <a href="#" target="_blank" class="btn">Discord Community</a>
-        <a href="#" target="_blank" class="btn">Beginner Guide</a>
-        <a href="#" target="_blank" class="btn">Instagram</a>
-        <a href="#" target="_blank" class="btn">Twitter Profil</a>
-        <a href="#" target="_blank" class="btn">Tik Tok</a>
-    </div>
+<div class="buttons">
+    <a href="#" class="btn">Discord Community</a>
+    <a href="#" class="btn">Beginner Guide</a>
+    <a href="#" class="btn">Instagram</a>
+    <a href="#" class="btn">Twitter Profil</a>
+    <a href="#" class="btn">Tik Tok</a>
 </div>
 
 </body>
